@@ -6,18 +6,18 @@ Android Studio >= 2.2
 dlib: v19.9
 cmake:  V3.4.1
 
-###获取源码
+### 获取源码
 官网左下角下载 http://dlib.net/
 
-###新建C 和 C++ 代码
-#####1 下载 NDK 和构建工具
+### 新建C 和 C++ 代码
+##### 1 下载 NDK 和构建工具
 1 在打开的项目中，从菜单栏选择 Tools > Android > SDK Manager。
 2 点击 SDK Tools 标签。
 3 选中 LLDB、CMake 和 NDK 旁的复选框
 
 ![attach_1510a5b62516f070](/Users/chenlei/Documents/attach_1510a5b62516f070.png)
 
-####创建支持 C/C++ 的新项目
+#### 创建支持 C/C++ 的新项目
 1  在向导的 Configure your new project 部分，选中 Include C++ Support 复选框。
 2 点击 Next。
 3 正常填写所有其他字段并完成向导接下来的几个
@@ -35,7 +35,7 @@ cmake:  V3.4.1
 ![attach_1510a5b62516f070](/Users/chenlei/Documents/attach_1510a5b62516f070.png)您会在 APK 分析器窗口的 lib/<ABI>/ 下看到 libnative-lib.so。
 ![attach_1510a6131d186e14](/Users/chenlei/Documents/attach_1510a6131d186e14.png)
 
-###项目添加dlib源码
+### 项目添加dlib源码
 ![attach_151141beda0daaec](/Users/chenlei/Documents/attach_151141beda0daaec.png)
 ### 修改CMakeLists.text
 ```cpp
@@ -79,7 +79,7 @@ target_link_libraries(dlib)
 `add_library `添加需要编译的cpp代码  `SHARED` 动态库
 `set_target_properties ` 编译后的so 从 build/intermediates/cmake copy到distribution/jniLibs
 
-###修改build.gradle
+### 修改build.gradle
 ```
   defaultConfig {
         externalNativeBuild {
@@ -91,7 +91,7 @@ target_link_libraries(dlib)
     }
 ```
 之后就开始编译
-###编译常见问题
+### 编译常见问题
 1  error: 'to_string' is not a member of 'std'
 在build.gradle 中cmake下添加     ` arguments "-DANDROID_STL=c++_shared"`
 2 编译后的so一直为debug版本
