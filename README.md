@@ -15,7 +15,7 @@ cmake:  V3.4.1
 2 点击 SDK Tools 标签。
 3 选中 LLDB、CMake 和 NDK 旁的复选框
 
-![attach_1510a5b62516f070](/Users/chenlei/Documents/attach_1510a5b62516f070.png)
+![attach_1510a5b62516f070](/image/1.png)
 
 #### 创建支持 C/C++ 的新项目
 1  在向导的 Configure your new project 部分，选中 Include C++ Support 复选框。
@@ -32,11 +32,11 @@ cmake:  V3.4.1
 
 1 选择 Build > Analyze APK。
 2 从 app/build/outputs/apk/ 目录中选择 APK 并点击 OK。
-![attach_1510a5b62516f070](/Users/chenlei/Documents/attach_1510a5b62516f070.png)您会在 APK 分析器窗口的 lib/<ABI>/ 下看到 libnative-lib.so。
+![attach_1510a5b62516f070](/image/2.png)您会在 APK 分析器窗口的 lib/<ABI>/ 下看到 libnative-lib.so。
 ![attach_1510a6131d186e14](/Users/chenlei/Documents/attach_1510a6131d186e14.png)
 
 ### 项目添加dlib源码
-![attach_151141beda0daaec](/Users/chenlei/Documents/attach_151141beda0daaec.png)
+![attach_151141beda0daaec](/image/3.png)
 ### 修改CMakeLists.text
 ```cpp
 cmake_minimum_required(VERSION 3.4.1)
@@ -102,4 +102,4 @@ debug版本的dlib动态库，人脸识别运行非常缓慢大概需要12秒，
 3. cppFlags指定-O2或-O3，无效。
 
 需要修改Android Studio Build Variant
-![attach_1511461b445055fc](/Users/chenlei/Documents/attach_1511461b445055fc.png)
+![attach_1511461b445055fc](/image/4.png)
