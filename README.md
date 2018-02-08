@@ -31,9 +31,10 @@ cmake:  V3.4.1
 如果您想要验证 Gradle 是否已将原生库打包到 APK 中，可以使用 APK 分析器：
 
 1 选择 Build > Analyze APK。
-2 从 app/build/outputs/apk/ 目录中选择 APK 并点击 OK。
-![attach_1510a5b62516f070](/image/2.png)您会在 APK 分析器窗口的 lib/<ABI>/ 下看到 libnative-lib.so。
-![attach_1510a6131d186e14](/Users/chenlei/Documents/attach_1510a6131d186e14.png)
+2 从 app/build/outputs/apk/ 目录中选择 APK 并点击 OK。在 APK 分析器窗口的 lib/<ABI>/ 下看到 libnative-lib.so。
+            
+![attach_1510a5b62516f070](/image/2.png)
+
 
 ### 项目添加dlib源码
 ![attach_151141beda0daaec](/image/3.png)
@@ -102,4 +103,6 @@ debug版本的dlib动态库，人脸识别运行非常缓慢大概需要12秒，
 3. cppFlags指定-O2或-O3，无效。
 
 需要修改Android Studio Build Variant
+
+
 ![attach_1511461b445055fc](/image/4.png)
